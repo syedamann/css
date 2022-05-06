@@ -1,0 +1,133 @@
+----------------------Nmap-----------------------------
+
+### Port Scan
+```
+nmap --top-ports 20 10.0.2.15
+```
+### Finger-print Scan
+```
+nmap -o 10.0.2.15
+```
+### Ping Scan
+```
+nmap -sP 10.0.2.15
+```
+### TCP Scan
+```
+nmap -sT 10.0.2.15
+```
+### UDP Scan
+```
+nmap -sU 10.0.2.15
+```
+### Xmas Scan
+```
+nmap -sX 10.0.2.15
+```
+----------------------WHOIS------------------------
+
+### Whois 
+```
+whois google.com
+```
+### nslookup
+```
+nslookup google.com
+```
+### traceroute 
+```
+traceroute google.com
+```
+### route 
+```
+route
+```
+### dig 
+```
+dig google.com
+```
+
+--------------------------SQL injection-----------------------
+
+### 1. Installation
+```
+sudo apt-get install sqlmap
+```
+
+### 2. List all information about the existing database
+```
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 --dbs
+```
+
+### 3. Listing all tables present in the database
+```
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat-1 -D acuart --tables
+```
+
+### 4. List all the columns information of a particular table
+```
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 -D acuart -T products --columns
+```
+
+### 5. Dump
+```
+sqlmap -u http://testphp.vulnweb.com/listproducts.php?cat=1 -D acuart -T products -C name --dump
+```
+
+----------------------- Wireshark ------------------------------
+
+in terminal write wireshark
+
+click on capture (upar wala)
+click on start
+
+type udp, tcp, ntp on search bar
+
+
+------------------ Burpsuit -------------------------------
+In VMWARE kali linux
+
+in firefox -> burp suit download
+terminal:
+cd Downloads
+chmod +x *
+./<filenamefromdownloads.sh>
+next -> next
+
+kali sign -> burpsuit comm edition
+next -> start
+upar proxy hai
+
+intercept is on
+
+upar options <number> edit -> 8081
+
+open firefox
+right mein 3 lines -> settings ->
+preferences
+
+search proxy -? settings -> mannual proxy settings
+HTTP Proxy -> <number> Port -> 8081
+check also for hhtps
+
+click on ok
+
+on url box type http://burp
+save file ca certificate
+
+again go on settings
+search certificate
+view certi
+
+click on import
+select and open
+tick both boxes then ok
+
+
+in burp suit kali
+intercept is on
+left side forward
+
+firefox opens
+
+search bombay stock exchage click enter

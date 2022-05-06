@@ -1,0 +1,29 @@
+Diffie-Hellman Key Exchange algorithm: 
+Diffie-Hellman algorithm is one of the most important algorithms used for establishing a shared secret. 
+At the time of exchanging data over a public network, we can use the shared secret for secret communication. 
+We use an elliptic curve for generating points and getting a secret key using the parameters.
+We will take four variables, i.e., P (prime), G (the primitive root of P), and a and b (private values).
+The variables P and G both are publicly available. 
+The sender selects a private value, either a or b, for generating a key to exchange publicly. 
+The receiver receives the key, and that generates a secret key, 
+after which the sender and receiver both have the same secret key to encrypt. 
+Let's understand the process step by step for user1 (sender) and user2 (receiver):
+
+Steps
+User1
+1. P, G => available public keys.
+2. a is selected as a private key.
+3. Eq. to generate key: x=G^a mod P
+4. After exchanging keys, user1 receives key y.
+5. User1 generates a secret key by using the received key y: ka=ya mod P
+
+User2
+1. P, G => available public keys.
+2. b is selected as a private key.
+3. Eq. to generate key: y=G^b mod P
+4. After exchanging keys, user2 receives key x.
+5. User2 generates a secret key by using the received key x: kb=xb mod P
+
+Algebraically, 5th step can be shown as follows: 
+ka=kb 
+It means that both the users have the symmetric secret key to encrypt.

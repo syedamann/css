@@ -1,0 +1,37 @@
+MD5
+
+The MD5 hash function produces a 128-bit hash value. 
+It was designed for use in cryptography, but vulnerabilities were discovered over the course of time, 
+so it is no longer recommended for that purpose. 
+However, it is still used for database partitioning and computing checksums to validate files transfers.
+
+Algorithm 
+Step1: Append Padding Bits  Padding means adding extra bits to the original message. 
+So in MD5 original message is padded such that its length in bits is congruent to 448 modulo 512. 
+Padding is done such that the total bits are 64 less, being a multiple of 512 bits length.
+
+Padding is done even if the length of the original message is already congruent to 448 modulo 512. 
+In padding bits, the only first bit is 1, and the rest of the bits are 0. 
+
+Step 2: 
+Append Length After padding, 64 bits are inserted at the end, which is used to record the original input length. 
+Modulo 2^64. At this point, the resulting message has a length multiple of 512 bits.
+
+Step 3: 
+Initialize MD buffer. A four-word buffer (A, B, C, D) is used to compute the values for the message digest. 
+Here A, B, C, D are 32- bit registers and are initialized in the following way
+
+Step 4: 
+Processing message in 16-word block MD5 uses the auxiliary functions, 
+which take the input as three 32-bit numbers and produce 32-bit output. 
+These functions use logical operators like OR, XOR, NOR.
+
+
+SHA-1
+
+SHA stands for Secure Hash Algorithm. 
+The first version of the algorithm was SHA-1, and was later followed by SHA-2 (see below).
+Whereas MD5 produces a 128-bit hash, SHA1 generates 160-bit hash (20 bytes). 
+In hexadecimal format, it is an integer 40 digits long. 
+Like MD5, it was designed for cryptology applications, but was soon found to have vulnerabilities also. 
+lAs of today, it is no longer considered to be any less resistant to attack than MD5.

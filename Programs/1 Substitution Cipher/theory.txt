@@ -1,0 +1,50 @@
+Caesar Cipher
+
+The Caesar cipher is the simplest and oldest method of cryptography. 
+The Caesar cipher method is based on a mono-alphabetic cipher and is also called a shift cipher or additive cipher. 
+Julius Caesar used the shift cipher (additive cipher) technique to communicate with his officers. 
+For this reason, the shift cipher technique is called the Caesar cipher. 
+The Caesar cipher is a kind of replacement (substitution) cipher, where all letter of plain text is replaced by another letter.
+Let's take an example to understand the Caesar cipher, suppose we are shifting with 1, 
+then A will be replaced by B, B will be replaced by C, C will be replaced by D, D will be replaced by C, 
+and this process continues until the entire plain text is finished.
+Caesar ciphers is a weak method of cryptography. It can be easily hacked. 
+It means the message encrypted by this method can be easily decrypted.
+The formula of encryption is:
+En (x) = (x + n) mod 26
+The formula of decryption is:
+Dn (x) = (xi - n) mod 26
+If any case (Dn) value becomes negative (-ve), in this case, we will add 26 in the negative value.
+Where,
+E denotes the encryption D denotes the decryption x denotes the letters value n denotes the key value (shift value)
+
+
+Multiplicative Cipher
+
+
+The multiplicative cipher is similar to additive cipher except the fact that the key bit is multiplied to the plain-text symbol during encryption. Likewise, the cipher-text is multiplied by the multiplicative inverse of key for decryption to obtain back the plain-text.
+
+C = (M * k) mod n
+M = (C * k-1) mod n
+
+where,
+k-1 -> multiplicative inverse of k (key)
+
+The key space of multiplicative cipher is 12. Thus, it is also not very secure.
+
+Affine Cipher
+
+The affine cipher is a combination of additive cipher and multiplicative cipher. The key space is 26 * 12 (key space of additive * key space of multiplicative) i.e. 312. It is relatively secure than the above two as the key space is larger.
+Here two keys k1 and k2 are used.
+
+C = [(M * k1) + k2] mod n
+M = [(C – k2) * k1-1 ] mod n
+
+Vingere Cipher
+
+Vigenere Cipher is a method of encrypting alphabetic text. It uses a simple form of polyalphabetic substitution. A polyalphabetic cipher is any cipher based on substitution, using multiple substitution alphabets. The encryption of the original text is done using the Vigenère square or Vigenère table.
+ 
+
+The table consists of the alphabets written out 26 times in different rows, each alphabet shifted cyclically to the left compared to the previous alphabet, corresponding to the 26 possible Caesar Ciphers.
+At different points in the encryption process, the cipher uses a different alphabet from one of the rows.
+The alphabet used at each point depends on a repeating keyword.

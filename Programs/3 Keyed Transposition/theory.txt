@@ -1,0 +1,55 @@
+Transposition Cipher:
+
+In cryptography, a transposition cipher is a method of encryption by which the positions held by units of plaintext 
+(which are commonly characters or groups of characters) are shifted according to a regular system, 
+so that the cipher text constitutes a permutation of the plaintext. 
+That is, the order of the units is changed (the plaintext is reordered). 
+Mathematically a bi-jective function is used on the characters’ positions to encrypt and an inverse function to decrypt.
+
+Keyed Transposition Cipher:
+
+Keyed transposition cipher uses keys to encrypt and decrypt the messages. 
+It shares the same secret key among the senders and the receivers. 
+Key is used as position finder for the cipher text. We can illustrate this by giving a nice example as-
+
+Suppose given plaintext is- “prob hatd euri goth erek”. 
+And lets the key is=3201. Then the cipher text will be-(Here I assumed starting from 0)
+
+sss
+
+Here for encryption p is placed at 3th position, r is at 2nd, o is at 0th and b is at 1 to get the cipher text from the given key. And for the next words the same is applied. For decryption p is placed at 0th position, r is placed at 1st, b is placed at 3rd and o is placed at 2nd. The same is applied for the next.
+
+The encryption and decryption algorithm for keyed transposition cipher:
+
+For encryption:
+
+Step1: Take the inputs, plaintext and key.
+
+Step2: Calculate the length of the key.
+
+Step3: Divide the plaintext into multiple numbers of words equal to the key length.
+
+Step4: Use the key to encrypt each word.
+
+a. Until the end of a word put each character in its corresponding key position.
+
+b. Do step 4.a to the end of the plaintext.
+
+Step5: Display the encrypted text.
+
+For decryption:
+
+Step1: take the inputs, cipher text and key.
+
+Step2: Calculate length of the key.
+
+Step3: Divide the plaintext into multiple numbers of words equal to the key length.
+
+Step4: Use the key and positions to decrypt each word.
+
+Step5: Display the decrypted message.
+
+The encryption and decryption algorithm both performs the same operations from step1 to step3. 
+So we can use functions to do these operations. 
+The real hard part of this problem is to write the function for encryption and decryption. 
+And encryption and decryption are performed almost in reverse way.
